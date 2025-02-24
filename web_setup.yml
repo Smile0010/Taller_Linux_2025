@@ -46,7 +46,7 @@
       line: "IncludeOptional /etc/httpd/vhost.d/*.conf"
     notify: Reiniciar apache       
 
-   handlers:
+  handlers:
   - name: Reiniciar Apache
     ansible.builtin.systemd_service:
       name: httpd

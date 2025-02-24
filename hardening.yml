@@ -1,6 +1,6 @@
 ---
 
-- name: Bloqueo trafico Firewall
+- name: Hardening
   hosts: ubuntu
   become: true
 

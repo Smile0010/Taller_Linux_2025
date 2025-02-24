@@ -37,8 +37,8 @@
      path: /etc/hosts
      line: "10.10.1.12 www.ejemplo.com.uy"
      state: present
-     delegate_to: localhost
-     connection: local
+    delegate_to: localhost
+    connection: local
 
   - name: Modificar configuración de apache
     ansible.builtin.lineinfile:
@@ -48,6 +48,6 @@
 
   handlers:
   - name: Reiniciar Apache
-    ansible.builtin.systemd:
+    ansible.builtin.systemd_service:
       name: httpd
       state: restarted

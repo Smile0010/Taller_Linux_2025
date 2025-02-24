@@ -4,26 +4,19 @@
   become: true
 
   tasks:
-  - name: Habilitamos UFW y limitamos trafico
+
+    - name: Habilitamos UFW y bloqueamos el trafico
       community.general.ufw:
         state: enabled
         policy: deny
         direction: incoming
 
-  - name: Permitir SSH en UFW
+    - name: Permitir SSH en UFW
       community.general.ufw:
         rule: allow
         name: OpenSSH
 
-  - name: Asegurar que el directorio .ssh existe para sysadmin
-      ansible.builtin.file:
-        path: /home/sysadmin/.ssh
-        state: directory
-        owner: sysadmin
-        group: sysadmin
-        mode: '0700'
-
-  - name: Copiar clave pública de sysadmin
+    - name: Copiar clave pública de sysadmin
       ansible.builtin.copy:
         src: /home/sysadmin/.ssh/id_rsa.pub
         dest: /home/sysadmin/.ssh/authorized_keys
@@ -31,13 +24,17 @@
         group: sysadmin
         mode: '0600'
 
-  - name: Deshabilitar autenticación por contraseña en SSH
+    - name: Deshabilitar autenticación por contraseña en SSH
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config
         regexp: '^PasswordAuthentication'
         line: 'PasswordAuthentication no'
+        state: present
+      notify: Reiniciar ssh
 
-  - name: Reiniciar servicio SSH para aplicar cambios
+  handlers:
+
+    - name: Reiniciar ssh
       ansible.builtin.service:
         name: ssh
         state: restarted

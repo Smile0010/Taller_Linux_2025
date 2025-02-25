@@ -12,7 +12,10 @@ Utilizando el conocimiento adquirido en la creación de servidores y la automati
 ## Como utilizar este repositorio:
 ```bash
 #Instalamos Git para poder copiar el repositorio
-dnf install git
+sudo dnf install git
+
+#Instalamos ansible
+sudo dnf install ansible-core
 ```
 
 ```bash

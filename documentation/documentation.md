@@ -13,14 +13,15 @@ En este caso particular únicamente utilizaremos servidores Centos y Ubuntu.
 
 ## Diagrama Básico.
 
-Este diagrama dará una idea básica de cómo funcionará la implementación: ```mermaid
+Este diagrama dará una idea básica de cómo funcionará la implementación: 
+```mermaid
 graph LR
 A[Bastion-Server Primario] --> B{Ansible}
 B -- Conexión SSH--> C((CentOS))
 B -- Conexión SSH--> D((Ubuntu))
 E((Playbook))-->A
 F((ad-hoc))-->A
-
+```
 # Ejercicio 1
 
 #### Verificación de conexión exitosa con el módulo ping de Ansible.

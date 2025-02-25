@@ -24,6 +24,12 @@
         group: sysadmin
         mode: '0600'
 
+    - name: Validar clave pública del usuario sysadmin en servidor
+      ansible.posix.authorized_key:
+        user: sysadmin
+        state: present
+        key: "{{ lookup('file', '/home/sysadmin/.ssh/id_rsa.pub') }}"          
+
     - name: Deshabilitar autenticación por contraseña en SSH
       ansible.builtin.lineinfile:
         path: /etc/ssh/sshd_config

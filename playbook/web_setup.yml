@@ -34,7 +34,7 @@
         
   - name: Pagina indice generada por template
     ansible.builtin.template:
-      src: ./templates/index.j2
+      src: ../templates/index.j2
       dest: "/var/www/www.ejemplo.com.uy/html/index.html"
       owner: apache
       group: apache
@@ -50,7 +50,7 @@
 
   - name: Configurar el VirtualHost de www.ejemplo.com.uy
     ansible.builtin.template:
-      src: ./templates/virtualhost.j2
+      src: ../templates/virtualhost.j2
       dest: "/etc/httpd/vhost.d/www.ejemplo.com.uy.conf"
       owner: root
       group: root

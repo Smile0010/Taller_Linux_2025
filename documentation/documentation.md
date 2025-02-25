@@ -51,7 +51,7 @@ Ejecución del playbook hardening.yml:
 ![Tarea 3 - Hardening](../results/Tarea%203-%20Hardening.png)
 
 # Reflexión sobre los desafíos encontrados
-Mi mayor dificultad a la hora de realizar este trabajo fue sostener una correcta sintaxis en la creación de playbooks y inicialmente acostumbrarme a utilizar github ya que fue mi primera experiencia.
+Mi mayor dificultad al realizar este trabajo fue mantener una sintaxis correcta en la creación de playbooks y, al principio, acostumbrarme a utilizar GitHub, ya que era mi primera experiencia con la plataforma. Especialmente cuando tenía modificaciones en la web de GitHub y, por error mío, al querer hacer una nueva modificación local desde mi servidor, debía resincronizar el repositorio.
 
 # Referencias
 [Module-Posix](https://docs.ansible.com/ansible/latest/collections/ansible/posix/index.html)

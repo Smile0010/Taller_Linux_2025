@@ -28,23 +28,23 @@ F((ad-hoc))-->A
 ansible all -i inventory/servers.ini -m ping
 ```
 Captura:
-![Tarea 1](../result/Tarea%201.png)
+![Tarea 1](../results/Tarea%201.png)
 # Ejercicio 2
 #### Ejecución de comandos AD-HOC.
 2.1. Verificar tiempo de actividad en los servidores:
-![Tarea 2-1](../result/Tarea%202-1.png)
+![Tarea 2-1](../results/Tarea%202-1.png)
 
 2.2. Instalar apache en servidores WEB:
-![Tarea 2-2](../result/Tarea%202-2.png)
+![Tarea 2-2](../results/Tarea%202-2.png)
 
 2.3. Verificar uso de espacio en disco de los servidores ubuntu:
-![Tarea 2-3](../result/Tarea%202-3.png)
+![Tarea 2-3](../results/Tarea%202-3.png)
 
 # Ejercicio 3
 ####Ejecución de playbooks (hardening.yml) y (webserver.yml)
 
 Ejecución del playbook webserver.yml:
-![Tarea 3 - web setup](../result/Tarea%203-web_setup.png)
+![Tarea 3 - web setup](../results/Tarea%203-web_setup.png)
 
 Ejecución del playbook hardening.yml:
-![Tarea 3 - Hardening](../result/Tarea%203-%20Hardening.png)
+![Tarea 3 - Hardening](../results/Tarea%203-%20Hardening.png)

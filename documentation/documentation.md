@@ -20,15 +20,15 @@ B -- Conexión SSH--> C((CentOS))
 B -- Conexión SSH--> D((Ubuntu))
 E((Playbook))-->A
 F((ad-hoc))-->A
-```
+
 # Ejercicio 1
 
 #### Verificación de conexión exitosa con el módulo ping de Ansible.
-```bash
-ansible all -i inventory/servers.ini -m ping
-```
+
 Captura:
+
 ![Tarea 1](../results/Tarea%201.png)
+
 # Ejercicio 2
 #### Ejecución de comandos AD-HOC.
 2.1. Verificar tiempo de actividad en los servidores:
@@ -41,7 +41,7 @@ Captura:
 ![Tarea 2-3](../results/Tarea%202-3.png)
 
 # Ejercicio 3
-####Ejecución de playbooks (hardening.yml) y (webserver.yml)
+#### Ejecución de playbooks (hardening.yml) y (webserver.yml)
 
 Ejecución del playbook webserver.yml:
 ![Tarea 3 - web setup](../results/Tarea%203-web_setup.png)

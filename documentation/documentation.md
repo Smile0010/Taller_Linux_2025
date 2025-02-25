@@ -50,6 +50,8 @@ Ejecución del playbook webserver.yml:
 Ejecución del playbook hardening.yml:
 ![Tarea 3 - Hardening](../results/Tarea%203-%20Hardening.png)
 
+# Reflexión sobre los desafíos encontrados
+Mi mayor dificultad a la hora de realizar este trabajo fue sostener una correcta sintaxis en la creación de playbooks y inicialmente acostumbrarme a utilizar github ya que fue mi primera experiencia.
 
 # Referencias
 [Module-Posix](https://docs.ansible.com/ansible/latest/collections/ansible/posix/index.html)
